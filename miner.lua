@@ -1,11 +1,11 @@
 PROTOCOL = "ZTMP" -- Zwixxel Turtle Mining Protocol
-HOSTNAME = "Miner[" + os.getComputerID() +  "]"
+HOSTNAME = "Miner["..os.getComputerID().."]"
 NETSIDE  = "right"
 SERVER   = "MiningServer"
 print("Press and hold CTRL + T to terminate.\n")
 
 function online()
-   print("Registering ",HOSTNAME,"on Zwixxel Turtle Mining Protocol")
+   print("Registering ",HOSTNAME," on Zwixxel Turtle Mining Protocol")
    rednet.open(NETSIDE)
    rednet.host(PROTOCOL,HOSTNAME)
 end
@@ -39,9 +39,7 @@ main()
 
 
 -- Register on the mining network
--[
-while true do
-   local event,id,msg = os.pullEvent("rednet_message")
-]--
+-- while true do
+--   local event,id,msg = os.pullEvent("rednet_message")
 
 
